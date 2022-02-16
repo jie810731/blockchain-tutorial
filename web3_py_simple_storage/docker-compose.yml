@@ -1,0 +1,21 @@
+version: "3"
+services:
+  develop:
+    build:
+      context: ./
+    volumes:
+      - ./:/app
+    depends_on:
+      - ganache
+    networks:
+      - chainnetwork
+  ganache:
+    image: trufflesuite/ganache-cli:latest
+    ports:
+      - "8545:8545"
+    container_name: ganache
+    networks:
+      - chainnetwork
+networks:
+  chainnetwork:
+    driver: bridge
