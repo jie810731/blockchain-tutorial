@@ -18,7 +18,7 @@ contract SimpleStorage {
         favorateNumber = _favoreiteNumber;
     }
 
-    function retrive() public view returns (uint256) {
+    function retrieve() public view returns (uint256) {
         return favorateNumber;
     }
 
