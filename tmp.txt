@@ -11,4 +11,7 @@ docker run -d -p 8545:8545 --name ganache ganache
 
 
 docker run -i -t --rm  --net=web3_py_simple_storage_chainnetwork -v "$PWD":/usr/src/myapp -w /usr/src/myapp --link ganache
---name test-deploy web3_py_simple_storeage_develop
+--name test-deploy web3_py_simple_storage_develop
+
+
+ docker run -it --rm --name my-running-script --net=web3_py_simple_storage_chainnetwork -v "$PWD":/usr/src/myapp -w /usr/src/myapp python:3.7 python deploy.py

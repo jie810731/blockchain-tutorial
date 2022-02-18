@@ -38,9 +38,9 @@ abi = json.loads(
 
 # For connecting to ganache
 
-w3 = Web3(Web3.HTTPProvider("https://rinkeby.infura.io/v3/9aa3d95b3bc440fa88ea12eaa4456161"))
+w3 = Web3(Web3.HTTPProvider("http://ganache:8545"))
 chain_id = w3.eth.chain_id
-my_address = "0x5492656535f35B23C5604c368BA41aa64EF835bE"
+my_address = "0xe4A28648174A977c5C9A74C28A9B184FcB127620"
 private_key = os.getenv("PRIVATE_KEY")
 
 # Create the contract in Python
