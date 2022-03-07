@@ -74,6 +74,20 @@ addressToAmountFunded[msg.sender] += msg.value;
 
 ## brownie
 
+指令
+
+```
+# network列表
+brownie networks list
+
+# 切換網域
+brownie run scripts/deploy.py --network rinkeby
+
+
+# console (like tinker)
+brownie console
+```
+
 ### brownie test
 
 https://docs.pytest.org/en/7.0.x/
