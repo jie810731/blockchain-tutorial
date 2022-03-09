@@ -77,6 +77,9 @@ addressToAmountFunded[msg.sender] += msg.value;
 指令
 
 ```
+#編譯
+brownie compile
+
 # network列表
 brownie networks list
 
@@ -91,3 +94,18 @@ brownie console
 ### brownie test
 
 https://docs.pytest.org/en/7.0.x/
+
+brownie 只能讀取 github 套件 remix ide 是使用 npm 的 所以要轉成 github 的路徑 參考 brownie-config.yaml  
+[smartcontractkit
+/
+chainlink-brownie-contracts
+](https://github.com/smartcontractkit/chainlink-brownie-contracts) github 路徑
+
+contracts/test 此路徑放需要 mock 的合約  
+V3Aggregator mock 參考 [chainlink-mix
+](https://github.com/smartcontractkit/chainlink-mix)
+
+## borownie 新增 local ganache network(預設 development network 不會留 build 完的 contract 所以要新增)
+
+brownie networks add Ethereum ganache-local host=http://127.0.0.1:8545 chainid=1337
+brownie run scripts/deploy.py --network ganache-local
